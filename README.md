@@ -1,7 +1,9 @@
 sos-fire
 ===
 
-Sos fire build the project in sos way. Check out Sos [boilerplate(https://github.com/jkhabra/react-typescript-graphql-postgres-boilerplate). Also checkout the [sosApp](https://github.com/sosinc/sos-app).
+Sos fire build the project in sos way. Check out Sos
+[boilerplate](https://github.com/jkhabra/react-typescript-graphql-postgres-boilerplate).
+Also checkout the [sosApp](https://github.com/sosinc/sos-app).
 
 <!-- toc -->
 # Usage
