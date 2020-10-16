@@ -1,0 +1,50 @@
+{
+  "name": "sos-fire",
+  "description": "Build the project in sos way",
+  "version": "0.0.0",
+  "author": "Jatinder @jkhabra",
+  "bin": {
+    "sos": "./bin/run"
+  },
+  "bugs": "https://github.com/jkhabra/sos-fire/issues",
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^3",
+    "ts-node": "^9.0.0",
+    "tslib": "^1",
+    "typescript": "^4.0.3"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "homepage": "https://github.com/jkhabra/sos-fire",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "sos",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "jkhabra/sos-fire",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "eslint . --ext .ts --config .eslintrc",
+    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "types": "lib/index.d.ts"
+}
