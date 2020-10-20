@@ -1,6 +1,6 @@
 {
   "name": "sos-fire",
-  "description": "Build the project in sos way",
+  "description": "Build the project in SoS way",
   "version": "0.0.1",
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",

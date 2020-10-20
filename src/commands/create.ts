@@ -2,12 +2,12 @@ import { Command } from '@oclif/command';
 import { execSync } from 'child_process';
 
 export default class Create extends Command {
-  static description = 'Build the project in sosfiy way';
+  static description = 'Build the project in SoS way';
   static args = [
     {
       name: 'projectName',
       required: true,
-      descriptoin: 'set a project name',
+      description: 'Name of the project',
     },
   ];
 
