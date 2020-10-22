@@ -1,8 +1,18 @@
 {
   "name": "sos-fire",
-  "description": "Build the project in sos way",
-  "version": "0.0.0",
-  "author": "Jatinder @jkhabra",
+  "description": "Build the project in SoS way",
+  "version": "0.0.1",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "eslint . --ext .ts --config .eslintrc",
+    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md",
+    "typecheck": "tsc --noEmit",
+    "lint": "yarn tslint --project .",
+    "fmt": "prettier-tslint fix 'src/**/*.ts'"
+  },
+  "author": "Jatinder Singh @jkhabra",
   "bin": {
     "sos": "./bin/run"
   },
@@ -15,7 +25,11 @@
     "tslib": "^1",
     "typescript": "^4.0.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "tslint": "^6.1.3",
+    "prettier": "^2.1.2",
+    "prettier-tslint": "^0.4.2"
+  },
   "engines": {
     "node": ">=8.0.0"
   },
@@ -39,12 +53,5 @@
     ]
   },
   "repository": "jkhabra/sos-fire",
-  "scripts": {
-    "postpack": "rm -f oclif.manifest.json",
-    "posttest": "eslint . --ext .ts --config .eslintrc",
-    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
-    "test": "echo NO TESTS",
-    "version": "oclif-dev readme && git add README.md"
-  },
   "types": "lib/index.d.ts"
 }
